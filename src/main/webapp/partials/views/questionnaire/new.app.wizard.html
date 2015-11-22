@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-6" ui-view>
+        <div><label for="applicationTypeWeb">Select Application Type</label></div>
+        <div>
+            <input type="radio" ng-model="questionnaireForm.applicationTypeFormElement" name="applicationTypes" id="applicationTypeWeb" value="Web"> <label for="applicationTypeWeb"> Web Application</label>
+        </div>
+        <div>
+            <input type="radio" ng-model="questionnaireForm.applicationTypeFormElement" name="applicationTypes" id="applicationTypeWebService" value="Web Service"> <label for="applicationTypeWebService"> Web Service Application</label>
+        </div>
+        <div>
+            <input type="radio" ng-model="questionnaireForm.applicationTypeFormElement" name="applicationTypes" id="applicationTypeMobile" value="Mobile"> <label for="applicationTypeMobile"> Mobile Application</label>
+        </div>
+        <div>
+            <input type="radio" ng-model="questionnaireForm.applicationTypeFormElement" name="applicationTypes" id="applicationTypeOther" value="Other"> <label for="applicationTypeOther"> Other</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div ng-show="showAppHostedLocationSection()">
+            <div class="form-group">
+                <label for="appHostedLocationFormElement">Where is your application hosted?</label>
+
+                <select ng-model="questionnaireForm.appHostedLocationFormElement" id="appHostedLocationFormElement" class="form-control">
+                    <option value="KP Data Centers">KP Data Centers</option>
+                    <option value="Vendor Hosted">Vendor Hosted</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr/>
+        <button class="btn btn-primary btn-sm" ng-disabled="(applicationTypeNotSelected() === true)" ng-click="addApplication();">
+            Next <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+    </div>
+</div>

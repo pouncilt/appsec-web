@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <meta charset="utf-8">
+    <title>KP Application Security</title>
+    <meta name="description" content="Technology Risk Office - Cyber Security - Application Security">
+    <meta name="author" content="">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Angular -->
+    <link rel="stylesheet" href="css/lib/angular-bootstrap.css">
+
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/animations.css" media="screen">
+    <link rel="stylesheet" href="css/superfish.css" media="screen">
+    <link rel="stylesheet" href="css/revolution-slider/css/settings.css" media="screen">
+    <link rel="stylesheet" href="css/prettyPhoto.css" media="screen">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Skin -->
+    <link rel="stylesheet" href="css/colors/blue.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/theme-responsive.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="img/ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144.png">
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+
+    <!-- Questionnaire CSS -->
+    <link rel="stylesheet" href="css/new/standardtopofpage-dashboard.css">
+</head>
+<body class="home" ng-app>
+<div class="wrap">
+    <!-- Header Start -->
+    <header id="header">
+        <!-- Header Top Bar Start -->
+        <div class="top-bar">
+            <div class="slidedown collapse">
+                <div class="container">
+                    <div class="phone-email pull-left">
+                        <!--                         <a><i class="icon-phone"></i> Call Us : 925 872 4548</a> -->
+                        <a href="mailto:kpis-application-security@kp.org"><i class="icon-envelope"></i> Email : kpis-application-security@kp.org</a>
+                    </div>
+                    <div class="pull-right">
+                        <p>For the best viewing experience, use Firefox, Chrome or Safari</p>
+                        <!--                         <ul class="social pull-left">
+                               <li class="rss"><a href="#"><i class="icon-rss"></i></a></li>
+                            </ul>
+                            <div id="search-form" class="pull-right">
+                               <form action="#" method="get">
+                                  <input type="text" class="search-text-box">
+                               </form>
+                            </div>
+     -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Bar End -->
+        <!-- Main Header Start -->
+        <div class="main-header">
+            <div class="container">
+                <!-- TopNav Start -->
+                <div class="topnav navbar-header">
+                    <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown"> <i class="icon-angle-down icon-current"></i>
+                    </a>
+                </div>
+                <!-- TopNav End -->
+                <!-- Logo Start -->
+                <div class="logo pull-left">
+                    <h1>
+                        <a href="index.jsp"> <img src="img/logo.png" alt="AppSec" width="250" height="60">
+                        </a>
+                    </h1>
+                </div>
+                <!-- Logo End -->
+                <!-- Mobile Menu Start -->
+                <div class="mobile navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse"> <i class="icon-reorder icon-2x"></i>
+                    </a>
+                </div>
+                <!-- Mobile Menu End -->
+                <!-- Menu Start -->
+                <nav class="collapse navbar-collapse menu">
+                    <ul class="nav navbar-nav sf-menu">
+                        <li><a href="https://riskengine.kp.org/RiskEngine/RequestIntake/RequestIntakeWelcome.aspx" target="_blank"> Engage <span class="sf-sub-indicator"> <i class="icon-angle-down "></i>
+						</span>
+                        </a>
+                            <ul>
+                                <li><a ui-sref="questionnaire" class="sf-with-ul">Tell us more about your intake</a></li>
+                                <li><a href="engage/slaforappsecservices.jsp" class="sf-with-ul">SLA for Application Security Services</a></li>
+                                <li><a href="engage/slatoremediateappsecvuls.jsp" class="sf-with-ul">SLA to Remediate Application Security Vulnerabilities</a></li>
+                            </ul></li>
+                        <li><a href="services.jsp" class="sf-with-ul"> Services <span class="sf-sub-indicator"> <i class="icon-angle-down "></i>
+						</span>
+                        </a>
+                            <ul>
+                                <li><a href="services/hybridanalysis.jsp" class="sf-with-ul">Hybrid Analysis</a></li>
+                                <li><a href="services/remediationhelp.jsp" class="sf-with-ul">Remediation Help</a></li>
+                                <li><a href="services/continuousassessment.jsp" class="sf-with-ul"> Continuous Assessment for existing &amp; emerging Threats <span class="sf-sub-indicator pull-right"> <i
+                                        class="icon-angle-right "></i>
+								</span>
+                                </a>
+                                    <ul>
+                                        <li><a href="services/howtosendcreds.jsp" class="sf-with-ul">How to send URL &amp; Credentials</a></li>
+                                    </ul></li>
+                                <li><a href="services/waf.jsp" class="sf-with-ul"> Application Attack Defense - Web Application Firewall <span class="sf-sub-indicator pull-right"> <i class="icon-angle-right "></i>
+								</span>
+                                </a>
+                                    <ul>
+                                        <li><a href="services/howtosendipandcerts.jsp" class="sf-with-ul">How to send IP addresses, Certificates &amp; Keys</a></li>
+                                    </ul></li>
+                            </ul></li>
+                        <li><a href="resources.jsp" class="sf-with-ul"> Resources <span class="sf-sub-indicator"> <i class="icon-angle-down "></i>
+						</span>
+                        </a>
+                            <ul>
+                                <li><a href="resources/appsecrequirements.jsp" class="sf-with-ul">AppSec Requirements</a></li>
+                                <li><a href="resources/appsecdesignguide.jsp" class="sf-with-ul">AppSec Design Guidelines</a></li>
+                                <li><a href="resources/securecodingguide.jsp" class="sf-with-ul">Secure Coding Guides</a></li>
+                                <li><a href="resources/securecodinglibraries.jsp" class="sf-with-ul">Secure Coding Libraries</a></li>
+                            </ul></li>
+                        <li><a href="howtofix.jsp" class="sf-with-ul"> How to Fix <span class="sf-sub-indicator"> <i class="icon-angle-down "></i>
+						</span>
+                        </a>
+                            <ul>
+                                <li><a href="howtofix/crosssitescripting.jsp" class="sf-with-ul"> Cross Site Scripting (XSS) <span class="sf-sub-indicator pull-right"> <i class="icon-angle-right "></i>
+								</span>
+                                </a>
+                                    <ul>
+                                        <li><a href="howtofix/xssinwebpages.jsp" class="sf-with-ul">XSS in Web Pages</a></li>
+                                        <li><a href="howtofix/reflectedxss.jsp" class="sf-with-ul">Reflected XSS</a></li>
+                                        <li><a href="howtofix/persistentxss.jsp" class="sf-with-ul">Persistent XSS</a></li>
+                                    </ul></li>
+                                <li><a href="howtofix/sqlinjection.jsp" class="sf-with-ul"> SQL Injection <span class="sf-sub-indicator pull-right"> <i class="icon-angle-right "></i>
+								</span>
+                                </a>
+                                    <ul>
+                                        <li><a href="howtofix/javasqli.jsp" class="sf-with-ul">Java</a></li>
+                                        <li><a href="howtofix/jpasqli.jsp" class="sf-with-ul">JPA (Java Persistent API)</a></li>
+                                        <li><a href="howtofix/hibernatesqli.jsp" class="sf-with-ul">Hibernate</a></li>
+                                        <li><a href="howtofix/mybatissqli.jsp" class="sf-with-ul">MyBatis</a></li>
+                                        <li><a href="howtofix/storedproceduresqli.jsp" class="sf-with-ul">Stored Procedure</a></li>
+                                    </ul></li>
+                                <li><a href="howtofix/pathmanipulation.jsp" class="sf-with-ul">Path Manipulation</a></li>
+                                <li><a href="howtofix/insufficienttls.jsp" class="sf-with-ul">Insufficient Transport Layer Security</a></li>
+                                <li><a href="howtofix/passwordmgmt.jsp" class="sf-with-ul">Password Management</a></li>
+                                <li><a href="howtofix/racecondition.jsp" class="sf-with-ul">Race Condition</a></li>
+                                <li><a href="howtofix/contentspoofing.jsp" class="sf-with-ul">Content Spoofing</a></li>
+                                <li><a href="howtofix/privacyviolation.jsp" class="sf-with-ul">Privacy Violation</a></li>
+                                <li><a href="howtofix/abuseoffunctionality.jsp" class="sf-with-ul">Abuse of Functionality</a></li>
+                                <li><a href="howtofix/informationleakage.jsp" class="sf-with-ul">Information Leakage</a></li>
+                            </ul></li>
+                        <li><a href="contact.jsp"> Contact <!-- 	                        <span class="sf-sub-indicator">
+                           	<i class="icon-angle-down "></i>
+                           	</span>
+ -->
+                        </a>
+                            <ul>
+                                <!--                               <li><a href="contact/about.jsp" class="sf-with-ul">About</a></li>
+                                  <li><a href="contact/faq.jsp" class="sf-with-ul">FAQ</a></li>
+     -->
+                            </ul></li>
+                    </ul>
+                </nav>
+                <!-- Menu End -->
+            </div>
+        </div>
+        <!-- Main Header End -->
+    </header>
+    <!-- Header End -->
+    <!-- Content Start -->
+    <div ui-view></div>
+    <!-- Content end-->
+    <!-- Footer Start -->
+    <footer id="footer">
+        <!-- Footer Top Start -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+                    <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-one">
+                        <h3>Dark Reading</h3>
+                        <script type="text/javascript">
+                            $(function(){
+                                $("div#feed1").rssWidget('http://www.darkreading.com/rss_simple.asp?f_n=645&f_ln=Application%20Security');
+                            });
+                        </script>
+                        <div id="feed1"></div>
+                    </section>
+                    <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-two">
+                        <h3>SANS AppSec Blog</h3>
+                        <script type="text/javascript">
+                            $(function(){
+                                $("div#feed2").rssWidget('http://software-security.sans.org/blog/feed/');
+                            });
+                        </script>
+                        <div id="feed2"></div>
+                    </section>
+                    <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+                        <h3>KP Headlines</h3>
+                        <script type="text/javascript">
+                            $(function(){
+                                $("div#feed3").rssWidget('http://share.kaiserpermanente.org/feed/');
+                            });
+                        </script>
+                        <div id="feed3"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Top End -->
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright by <a href="https://www.kp.org">Kaiser Permanente</a>. All Rights Reserved. </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+    </footer>
+    <!-- Footer End -->
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+</div>
+<!-- Wrap End -->
+<!-- The Scripts -->
+<script src="js/lib/angular-bootstrap.js" type="text/javascript"></script>
+<script src="js/angular/app.js" type="text/javascript"></script>
+<script src="js/angular/controllers/questionnaireController.js" type="text/javascript"></script>
+<script src="js/angular/directives/fileModelDirective.js" type="text/javascript"></script>
+<script src="js/lib/byte-pushers/com.bytepushers.extensions.ObjectExtension.js" type="text/javascript"></script>
+<script src="js/lib/byte-pushers/com.bytepushers.extensions.StringExtension.js" type="text/javascript"></script>
+<script src="js/lib/byte-pushers/com.bytepushers.extensions.DateExtension.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.Credential.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.MobileAppInfo.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.QuestionnaireInfo.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.WafAppInfo.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.WebAppInfo.js" type="text/javascript"></script>
+<script src="js/models/org.kp.models.QuestionnaireInfo.js" type="text/javascript"></script>
+<script src="js/lib/jquery/v1.8.3/jquery.min.js"></script>
+<script src="js/lib/twitter-bootstrap/v3.0.0/bootstrap.js"></script>
+<script src="js/lib/jquery/plugins/jquery.parallax1.1.3.js"></script>
+<script src="js/lib/modernizr/v2.6.2/modernizr-2.6.2.min.js"></script>
+<script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/lib/jquery/nivo/jquery.nivo.slider.pack.3.2.js"></script>
+<script src="js/lib/jquery/jquery.prettyPhoto.3.1.5.js"></script>
+<script src="js/lib/jquery/plugins/superfish.js"></script>
+<script src="js/lib/tweetmachine/v0.2.1b/tweetMachine.js"></script>
+<script src="js/lib/jquery/plugins/tytabs.js"></script>
+<script src="js/lib/jquery/marioestrada/jquery.gmap.min.2.1.4.js"></script>
+<script src="js/circularnav.js"></script>
+<script src="js/lib/jquery/plugins/jquery.sticky.1.3.1.js"></script>
+<script src="js/jflickrfeed.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/lib/waypoints/v2.0.3/waypoints.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/lib/jquery/rsswidget/jquery.rsswidget.js"></script>
+</body>
+</html>

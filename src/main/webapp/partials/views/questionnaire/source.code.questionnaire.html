@@ -1,0 +1,55 @@
+<div class="form-group">
+    <label for="sourceCodeRepository">Source Code Repository & Location: (Include location for all components including web services)</label>
+    <input type="text" class="form-control" ng-model="currentWebApplicationUIObject.sourceCodeRepository" id="sourceCodeRepository" placeholder="Source Code Repository & Location">
+</div>
+
+<div class="form-group">
+    <label for="ide">IDE & Version Used: (Eclipse, Xcode, Notepad etc)</label>
+    <input type="text" class="form-control" ng-model="currentWebApplicationUIObject.ide" id="ide" placeholder="Eclipse, Xcode, Notpad">
+</div>
+
+<div class="form-group">
+    <label for="dedicatedBuildCheckBox">Is source built in a dedicated build box?</label>
+    <input type="checkbox" ng-model="currentWebApplicationUIObject.dedicatedBuildBox" name="dedicatedBuildCheckBox" value="true" id="dedicatedBuildCheckBox">&nbsp;&nbsp;Yes
+    <input type="checkbox" ng-model="currentWebApplicationUIObject.dedicatedBuildBox" name="dedicatedBuildCheckBox" value="false">&nbsp;&nbsp;No
+</div>
+
+<div class="form-group">
+    <label for="ide">Build Tool Used?</label>
+    <input type="text" class="form-control" ng-model="currentWebApplicationUIObject.buildTool" id="buildTool" placeholder="Ant, Maven, Power Script, etc.">
+</div><!--
+
+
+<div ng-show="applicationTypeFormElement === 'Web'">
+    <div class="form-group">
+        <div class="col-xs-10">
+            <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.url" id="url" placeholder="URL">
+        </div>
+    </div>
+
+    <div ng-repeat="credential in questionnaireInfoUIObject.credentials track by credential.id">
+        <div class="form-group">
+            <div class="col-xs-10">
+                <input type="text" class="form-control" ng-model="credential.username" id="username" placeholder="Credential Username">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-10">
+                <input type="text" class="form-control" ng-model="credential.password" id="password" placeholder="Credential Password">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-10">
+                <select ng-model="credential.environment" id="environment" class="form-control">
+                    <option value="choose" selected="selected">Choose Environment</option>
+                    <option value="QA">QA</option>
+                    <option value="Staging">Staging</option>
+                    <option value="Pre-Production">Pre-Production</option>
+                    <option value="Production">Production</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>-->

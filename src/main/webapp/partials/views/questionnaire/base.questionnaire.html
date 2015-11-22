@@ -1,0 +1,165 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example of Bootstrap 3 Horizontal Form Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .bs-example{
+            margin: 20px;
+        }
+        /* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+        .form-horizontal .control-label{
+            padding-top: 7px;
+        }
+    </style>
+</head>
+<body>-->
+
+<!--
+</body>
+</html>-->
+
+<div id="main">
+    <!-- Title, Breadcrumb Start-->
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                    <h2 class="title">Tell us more about your intake</h2>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                    <div class="breadcrumbs pull-right">
+                        <ul>
+                            <li>You are here:</li>
+                            <li><a ui-sref="home">Home</a></li>
+                            <li><a href="https://riskengine.kp.org/RiskEngine/RequestIntake/RequestIntakeWelcome.aspx" target="_blank">Engage</a></li>
+                            <li>Tell us more about your intake</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Title, Breadcrumb End-->
+    <!-- Main Content start-->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="bs-example">
+                    <form name="questionnaireForm" novalidate>
+                        <div class="border-radius-main-form gray-lighter">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="applicationName">Application Name</label>
+                                        <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.applicationName" ng-disabled="disableEngagmentData" id="applicationName" placeholder="Application Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="projectName">Project Name</label>
+                                        <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.projectName" ng-disabled="disableEngagmentData" id="projectName" placeholder="Project Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="requesterName">Requester Name</label>
+                                        <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.requesterName" ng-disabled="disableEngagmentData" id="requesterName" placeholder="Requester">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="delegateName">Delegate Name</label>
+                                        <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.delegateName" ng-disabled="disableEngagmentData" id="delegateName" placeholder="Delegate">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="troNumber">TRO Number *</label>
+                                        <input type="text" class="form-control" ng-model="questionnaireInfoUIObject.troNumber" id="troNumber" placeholder="TRO #">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sdlcPhase">Which phase of the SDLC (Software Delivery Life Cycle) are you currently in?</label>
+                                        <select ng-model="questionnaireInfoUIObject.sdlcPhase" id="sdlcPhase" class="form-control">
+                                            <option value="choose" selected="selected">Choose SDLC Phase</option>
+                                            <option value="Requirements">Requirments</option>
+                                            <option value="Design">Design</option>
+                                            <option value="Development">Development</option>
+                                            <option value="QA">QA/Testing/Stage</option>
+                                            <option value="Production">Production</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="appDevOrigin">Who is developing the application?</label>
+                                        <select ng-model="questionnaireInfoUIObject.appDevOrigin" id="appDevOrigin" class="form-control">
+                                            <option value="choose" selected="selected">Choose application origin.</option>
+                                            <option value="Internally">Developed Internally</option>
+                                            <option value="Outsourced">Developed by an Outsourced Team</option>
+                                            <option value="KP_Vendor">Vendor product customized for KP appliations</option>
+                                            <option value="General_Vendor">Vendor product for general public use</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="goLiveDate">Expected Go Live Date: </label><br>
+                                        <input type="date" id="goliveDate" name="goLiveDate" ng-model="questionnaireInfoUIObject.goLiveDate"
+                                               placeholder="yyyy-MM-dd" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div ng-show="showApplicationSection()">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <div class="border-radius-top-box gray-lighter">
+                                        <div class="section_header_title pull-left">Applications</div>
+                                        <button class="btn btn-success btn-sm pull-right" ng-click="startNewApplicationWizard();">
+                                            <span class="glyphicon glyphicon-plus"></span> Add Application
+                                        </button>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="border-radius-bottom-box" style="background-color:#fff; max-height:470px; min-height:470px; overflow-y:scroll;">
+                                        <ul class="list-group first" ng-model="questionnaireInfoUIObject.applications">
+                                            <li class="list-group-item text-left" ng-repeat="app in questionnaireInfoUIObject.applications">
+                                                <div class="glyphicon glyphicon-align-justify pull-left" style="margin:10px;"></div>
+                                                <div class="pull-left">
+                                                    <div class="strong" style="font-size:12px;" ng-click="editApplication(app);">
+                                                        {{app.guiName}} - {{app.type}}
+                                                    </div>
+                                                    <div style="font-size:12px;">{{app.guiDescription}}</div>
+                                                </div>
+                                                <div class="pull-right margin_top_10">
+                                                    <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editApplication(app);"></span>
+                                                    <span class="glyphicon glyphicon-remove-circle cursor-pointer" style="margin-left:10px; color:red;" ng-click="removeApplication(app);"></span>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-8" style="overflow-y:auto;overflow-x:hidden;">
+                                    <div class="border-radius-top-box gray-lighter">
+                                        <div class="section_header_title pull-left">{{currentWebApplicationUIObject.guiName}}&nbsp;</div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="border-radius-bottom-box padding_10" style="min-height:470px; background-color:#FFFFFF;">
+                                        <div ui-view></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group pull-right">
+                                    <button class="btn btn-primary" ng-disabled="!moduleDetailsForm.$valid" ng-click="save();">Save</button>
+                                    <button class="btn btn-primary" ng-disabled="!moduleDetailsForm.$valid" ng-click="submit();">Submit</button>
+                                    <button class="btn btn-default" ng-click="cancel();">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content End -->
+</div>

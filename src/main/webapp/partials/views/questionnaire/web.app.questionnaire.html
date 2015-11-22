@@ -1,0 +1,31 @@
+<div ng-show="(questionnaireForm.applicationTypeFormElement === 'Development' || questionnaireForm.applicationTypeFormElement === 'QA' )&&
+              (questionnaireInfoUIObject.appDevOrigin === 'Developed Internally' || questionnaireInfoUIObject.appDevOrigin === 'Developed by an Outsourced Team')">
+    <ng-include src="'partials/views/questionnaire/source.code.questionnaire.html'"></ng-include>
+    <div ng-show="questionnaireForm.applicationTypeFormElement === 'Web'">
+        <ng-include src="'partials/views/questionnaire/credentials.questionnaire.html'"></ng-include>
+    </div>
+    <div ng-show="questionnaireForm.applicationTypeFormElement === 'Mobile'">
+        <ng-include src="'partials/views/questionnaire/mobile.app.questionnaire.html'"></ng-include>
+    </div>
+</div>
+<div ng-show="(questionnaireForm.applicationTypeFormElement === 'Development' || questionnaireForm.applicationTypeFormElement === 'QA' )&&
+              (questionnaireInfoUIObject.appDevOrigin === 'Vendor product customized for KP appliations' || questionnaireInfoUIObject.appDevOrigin === 'Vendor product customized for KP appliations')">
+    <ng-include src="'partials/views/questionnaire/source.code.questionnaire.html'"></ng-include>
+    <div ng-show="questionnaireForm.applicationTypeFormElement === 'Web'">
+        <ng-include src="'partials/views/questionnaire/credentials.questionnaire.html'"></ng-include>
+        <ng-include src="'partials/views/questionnaire/vendor.hosted.questionnaire.html'"></ng-include>
+    </div>
+    <div ng-show="questionnaireForm.applicationTypeFormElement === 'Mobile'">
+        <ng-include src="'partials/views/questionnaire/mobile.app.questionnaire.html'"></ng-include>
+        <ng-include src="'partials/views/questionnaire/vendor.hosted.questionnaire.html'"></ng-include>
+    </div>
+</div>
+<div ng-show="questionnaireForm.applicationTypeFormElement === 'Web' && questionnaireInfoUIObject.sdlcPhase === 'Production'">
+    <ng-include src="'partials/views/questionnaire/credentials.questionnaire.html'"></ng-include>
+    <div ng-show="questionnaireForm.appHostedLocationFormElement === 'KP Data Centers'">
+        <ng-include src="'partials/views/questionnaire/waf.app.questionnaire.html'"></ng-include>
+    </div>
+    <div ng-show="questionnaireForm.appHostedLocationFormElement === 'Vendor Hosted'">
+        <ng-include src="'partials/views/questionnaire/vendor.hosted.questionnaire.html'"></ng-include>
+    </div>
+</div>

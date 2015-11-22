@@ -1,0 +1,78 @@
+.border-radius-main-form hr {
+	border-top: 1px solid #999;
+}
+
+.border-radius-main-form {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #bbb;
+	padding: 10px 20px;
+}
+
+.border-radius-main-form-left {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #bbb;
+	padding:0 5px;
+}
+
+.border-radius-main-form{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #bbb;
+	padding: 10px 20px;
+	background-color: #eeeeee;
+}
+
+.border-radius-top-box{
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #bbb;
+	padding: 5px 10px;
+}
+
+.border-radius-bottom-box{
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #bbb;
+	padding: 5px 5px;
+}
+.section_header_title{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+
+.gray-lighter{
+	background-color:#eee;
+}
+
+.txt_lable_lg {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.txt_lable_md {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.badge_content{
+	line-height:22px;
+}
+
+.badge_content a{
+	color:#fff;
+	text-decoration: underline;
+}
+
+.section_header_title{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-weight:bold;
+}
